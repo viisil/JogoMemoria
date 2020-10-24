@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -36,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
     int turn = 1;
     int playerPoints = 0, cpuPoints = 0;
 
-    
+    MediaPlayer player;
+
+
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,6 +177,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    public void play(View view){
+        if(player == null){
+            player = MediaPlayer.create(this, R.raw.song);
+        }
+        player.start();
+    }
+    public void pause(View view){
+        if (player != null) {
+            player.pause();
+        }
     }
 
     private void doStuff(ImageView iv, int card) {

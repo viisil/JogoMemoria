@@ -9,12 +9,12 @@
 
     <include
         layout="@layout/imagens"
-        android:layout_width="401dp"
-        android:layout_height="524dp"
+        android:layout_width="406dp"
+        android:layout_height="496dp"
         android:layout_below="@+id/tv_j1"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="72dp"
-        android:layout_marginBottom="59dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="3dp"
         tools:layout_centerHorizontal="true"
         tools:layout_centerVertical="true" />
 
@@ -49,5 +49,33 @@
         android:text="Jogador 2: 0"
         android:textColor="#000000"
         android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="44dp"
+        android:layout_height="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="553dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:onClick="pause"
+        app:srcCompat="@drawable/desligado" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="44dp"
+        android:layout_height="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="553dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_toStartOf="@+id/imageView2"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:onClick="play"
+        app:srcCompat="@drawable/ligado" />
 
 </RelativeLayout>
