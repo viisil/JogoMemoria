@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
         }
         player.start();
     }
-    public void pause(View view){
+    public void pauseMusic(View view){
         if (player != null) {
             player.pause();
         }
@@ -378,6 +378,7 @@ public class MainActivity extends AppCompatActivity {
                 iv_33.getVisibility() == View.INVISIBLE &&
                 iv_34.getVisibility() == View.INVISIBLE) {
 
+            pauseMusic();
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
             alertDialogBuilder
                     .setMessage("Fim de Jogo!\n\nJogador 1: " + playerPoints1 + "\nJogador 2: " + playerPoints2)
@@ -398,6 +399,12 @@ public class MainActivity extends AppCompatActivity {
                     });
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
+        }
+    }
+
+    private void pauseMusic() {
+        if (player != null) {
+            player.pause();
         }
     }
 

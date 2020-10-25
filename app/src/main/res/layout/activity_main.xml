@@ -64,7 +64,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="26dp"
-        android:onClick="pause"
+        android:onClick="pauseMusic"
         app:srcCompat="@drawable/desligado"
         android:contentDescription="@string/mude"
         tools:ignore="ContentDescription" />
