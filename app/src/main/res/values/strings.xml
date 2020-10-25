@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">JogoMemoria</string>
+    <string name="btnJogar">MainActivity</string>
+    <string name="jogador_1_0">Jogador 1: 0</string>
+    <string name="jogador_2_0">Jogador 2: 0</string>
+    <string name="mude">mude</string>
+    <string name="som">som</string>
+    <string name="jogar">Jogar</string>
+    <string name="fundo">fundo</string>
 </resources>
