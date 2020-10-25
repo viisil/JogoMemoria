@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     int cardNumber = 1;
 
     int turn = 1;
-    int playerPoints = 0, cpuPoints = 0;
+    int playerPoints1 = 0, playerPoints2 = 0;
 
     MediaPlayer player;
 
@@ -317,11 +316,11 @@ public class MainActivity extends AppCompatActivity {
 
             //add points to correct player
             if(turn == 1){
-              playerPoints++;
-              tv_j1.setText("Jogador 1: "+playerPoints);
+              playerPoints1++;
+              tv_j1.setText("Jogador 1: "+ playerPoints1);
             } else if(turn == 2){
-                cpuPoints++;
-                tv_j2.setText("Jogador 2: "+cpuPoints);
+                playerPoints2++;
+                tv_j2.setText("Jogador 2: "+ playerPoints2);
             }
         } else {
             iv_11.setImageResource(R.drawable.capa);
@@ -381,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
             alertDialogBuilder
-                    .setMessage("Fim de Jogo!\n\nJogador 1: " + playerPoints + "\nJogador 2: " + cpuPoints)
+                    .setMessage("Fim de Jogo!\n\nJogador 1: " + playerPoints1 + "\nJogador 2: " + playerPoints2)
                     .setCancelable(false)
                     .setPositiveButton("Novo Jogo", new DialogInterface.OnClickListener() {
                         @Override
