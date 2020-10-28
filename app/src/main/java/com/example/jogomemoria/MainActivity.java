@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    public void play(View view){
+    public void playMusic(View view){
         if(player == null){
             player = MediaPlayer.create(this, R.raw.fundo);
         }
@@ -381,7 +381,7 @@ public class MainActivity extends AppCompatActivity {
             pauseMusic();
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
             alertDialogBuilder
-                    .setMessage("Fim de Jogo!\n\nJogador 1: " + playerPoints1 + "\nJogador 2: " + playerPoints2)
+                    .setMessage("Fim de Jogo!\n\nJogador 1: " + playerPoints1 + " pontos" + "\nJogador 2: " + playerPoints2 + " pontos")
                     .setCancelable(false)
                     .setPositiveButton("Novo Jogo", new DialogInterface.OnClickListener() {
                         @Override
@@ -402,12 +402,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void playEffect() {
+        player = MediaPlayer.create(this, R.raw.swoosh);
+        player.start();
+    }
+
+    private void pauseEffect() {
+        player.pause();
+    }
+
     private void pauseMusic() {
         if (player != null) {
             player.pause();
         }
     }
-
 
     private void frontOfCardsResources() {
         flor101 = R.drawable.flor101;

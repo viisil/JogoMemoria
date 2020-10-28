@@ -83,7 +83,7 @@
         android:layout_marginBottom="23dp"
         android:layout_toStartOf="@+id/imageView2"
         android:layout_toLeftOf="@+id/imageView2"
-        android:onClick="play"
+        android:onClick="playMusic"
         app:srcCompat="@drawable/ligado"
         android:contentDescription="@string/som"
         tools:ignore="ContentDescription" />
