@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void play(View view){
         if(player == null){
-            player = MediaPlayer.create(this, R.raw.song);
+            player = MediaPlayer.create(this, R.raw.fundo);
         }
         player.start();
     }
