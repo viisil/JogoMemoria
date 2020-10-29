@@ -379,6 +379,7 @@ public class MainActivity extends AppCompatActivity {
                 iv_34.getVisibility() == View.INVISIBLE) {
 
             pauseMusic();
+            playEffect();
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
             alertDialogBuilder
                     .setMessage("Fim de Jogo!\n\nJogador 1: " + playerPoints1 + " pontos" + "\nJogador 2: " + playerPoints2 + " pontos")
@@ -399,17 +400,23 @@ public class MainActivity extends AppCompatActivity {
                     });
             AlertDialog alertDialog = alertDialogBuilder.create();
             alertDialog.show();
+            pauseEffect();
         }
     }
 
     private void playEffect() {
-        player = MediaPlayer.create(this, R.raw.swoosh);
-        player.start();
+        if (player == null) {
+            player = MediaPlayer.create(this, R.raw.swoosh);
+            player.start();
+        }
     }
 
     private void pauseEffect() {
+        if(player != null){
         player.pause();
+        }
     }
+
 
     private void pauseMusic() {
         if (player != null) {
